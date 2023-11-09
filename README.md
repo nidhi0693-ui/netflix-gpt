@@ -31,3 +31,22 @@ module.exports = {
 Now you created a react app with tailwind css successfully. Now run the below command on your terminal to start your local development server.
 
 npm start
+
+## Features
+- Home Page (is user !authorised)
+
+  - Signin/Signup Page
+    - SignInForm / SignUpForm
+
+- Browse Page
+
+  - Navbar
+  - Showcase
+  - Showcase
+  - Trendings
+  - MoviesSuggestion
+    - MoviesList \* N
+
+- NetflixGPT
+  - Search
+  - MoviesSuggestion
