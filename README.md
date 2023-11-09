@@ -34,9 +34,10 @@ Now you created a react app with tailwind css successfully. Now run the below co
 
 ## Features
 - Home Page (is user !authorised)
-
-  - Signin/Signup Page
-    - SignInForm / SignUpForm
+  
+- Header 
+- Signin/Signup Page
+- SignInForm / SignUpForm
 
 - Browse Page
 
