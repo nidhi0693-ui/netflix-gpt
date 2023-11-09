@@ -4,16 +4,16 @@ Movies recommendation with AI.
 
 ## Setup
 
-Install react app using create-react-app (CRA)
+Install react app using `create-react-app` (CRA)
 
 Install and init tailwind css
 
-npm install -D tailwindcss
-npx tailwindcss init
+`npm install -D tailwindcss`
+`npx tailwindcss init`
 
 Configure tailwind css in your project
 
-npx tailwindcss init command will create a file tailwind.config.js in your project's root directory. Open tailwind.config.js and replace all content with below code.
+`npx tailwindcss init` command will create a file `tailwind.config.js` in your project's root directory. Open `tailwind.config.js` and replace all content with below code.
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -24,13 +24,13 @@ module.exports = {
   plugins: [],
 };
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+`@tailwind base`;
+`@tailwind components`;
+`@tailwind utilities`;
 
 Now you created a react app with tailwind css successfully. Now run the below command on your terminal to start your local development server.
 
-npm start
+`npm start`
 
 ## Features
 - Home Page (is user !authorised)
