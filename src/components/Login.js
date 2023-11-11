@@ -3,6 +3,7 @@ import Header from './Header'
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -14,6 +15,8 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
 
+  const navigate = useNavigate();
+
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   }
@@ -21,7 +24,7 @@ const Login = () => {
   const handleSubmit = () => {
     const message = checkValidData(email.current.value, password.current.value);
     setError(message);
-    if (!message) return; // if any validation error , return
+    if (message) return; // if any validation error , return
 
     // for sign up 
     if (!isSignInForm) {
@@ -29,6 +32,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
+        navigate("/browse");
         console.log(user);
         // ...
       })
@@ -42,6 +46,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        navigate("/browse");
         console.log(user);
         // ...
       })
