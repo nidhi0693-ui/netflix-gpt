@@ -17,7 +17,6 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
@@ -27,7 +26,7 @@ const Login = () => {
   const handleSubmit = () => {
     const message = checkValidData(email.current.value, password.current.value);
     setError(message);
-    if (message) return; // if any validation error , return
+   if (message) return; // if any validation error , return
 
     // for sign up 
     if (!isSignInForm) {
@@ -41,7 +40,6 @@ const Login = () => {
           // Profile updated!
           const { uid, email, displayName, photoURL } = auth.currentUser;
           dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
-          navigate("/browse");
           console.log(user);
         }).catch((error) => {
           // An error occurred
@@ -58,7 +56,6 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        navigate("/browse");
         console.log(user);
         // ...
       })
