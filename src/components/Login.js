@@ -1,9 +1,11 @@
 import React, {useRef, useState} from 'react'
 import Header from './Header'
 import { checkValidData } from '../utils/validate';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
 
@@ -16,6 +18,7 @@ const Login = () => {
   const password = useRef(null);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -32,9 +35,18 @@ const Login = () => {
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
-        navigate("/browse");
-        console.log(user);
-        // ...
+        updateProfile(user, {
+          displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/58619924?v=4"
+        }).then(() => {
+          // Profile updated!
+          const { uid, email, displayName, photoURL } = auth.currentUser;
+          dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
+          navigate("/browse");
+          console.log(user);
+        }).catch((error) => {
+          // An error occurred
+          setError(error.code + "-" + error.message);
+        });
       })
       .catch((error) => {
         setError(error.code + "-" + error.message);

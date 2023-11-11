@@ -45,6 +45,9 @@ Now you created a react app with tailwind css successfully. Now run the below co
 - Create Sign Up User Account in Firebase
 - Implement Sign In User Firebase API
 - Created Redux store with User Slice
+- Implemented Sign out
+- Updated Profile
+- Fetch from TMDB Movies
 
 - Browse Page
 
