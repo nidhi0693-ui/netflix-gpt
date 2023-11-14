@@ -17,4 +17,4 @@ const MainContainer = () => {
     )
 }
 
-export default MainContainer
+export default MainContainer;
