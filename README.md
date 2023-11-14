@@ -47,7 +47,13 @@ Now you created a react app with tailwind css successfully. Now run the below co
 - Created Redux store with User Slice
 - Implemented Sign out
 - Updated Profile
-- Fetch from TMDB Movies
+- Register TMDB API and create an app & get access token
+- Get data from TMDB now playing movies list API
+- Custom hook for now playing movies
+- create movieSlice
+- Fetch Data for Trailer Video
+- Embed you tube video and make autoplay
+- 
 
 - Browse Page
 
