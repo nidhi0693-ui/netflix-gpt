@@ -56,6 +56,8 @@ Now you created a react app with tailwind css successfully. Now run the below co
 - Build secondary component 
 - Added Movies List - Now Playing , Popular, Top Rated, Upcoming as card
 - GPT Search Feature
+- GPT Search Bar
+- Added Multi language Support in GPT Search 
 
 
 - Browse Page
