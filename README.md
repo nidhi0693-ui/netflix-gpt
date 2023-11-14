@@ -53,7 +53,7 @@ Now you created a react app with tailwind css successfully. Now run the below co
 - create movieSlice
 - Fetch Data for Trailer Video
 - Embed you tube video and make autoplay
-- 
+- Build secondary component 
 
 - Browse Page
 
