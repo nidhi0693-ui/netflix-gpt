@@ -54,6 +54,8 @@ Now you created a react app with tailwind css successfully. Now run the below co
 - Fetch Data for Trailer Video
 - Embed you tube video and make autoplay
 - Build secondary component 
+- Added Movies List - Now Playing , Popular, Top Rated, Upcoming as card
+
 
 - Browse Page
 
