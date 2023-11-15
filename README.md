@@ -58,6 +58,8 @@ Now you created a react app with tailwind css successfully. Now run the below co
 - GPT Search Feature
 - GPT Search Bar
 - Added Multi language Support in GPT Search 
+- Integrate Open AI Api and fetch the TMDB Movies from the AI suggestions
+- GPT Suggestion UI
 
 
 - Browse Page

@@ -26,4 +26,4 @@ export const SUPPORTED_LANGUAGES = [
     }
 ];
 
-export const OPENAI_KEY = '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';
+// export const OPENAI_KEY = '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';

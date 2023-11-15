@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import { useSelector,useDispatch  } from 'react-redux';
 import lang from '../utils/languageConstants';
 import openai from '../utils/openai';
@@ -16,10 +16,12 @@ const GptSearchBar = () => {
         const json = await data.json();
         return json.results;
     }
+    //let gptQuery = '';
 
-    const gptQuery = 'Act as a Movie Recommendation system and suggest some movies for the query: ' 
-        + searchText.current.value + 
-        '. only give me names of 5 movies, comma separated like the example result given ahead. Example Result: Gadar, Sholey, Don, Golmal, Race';
+    // if (searchText.current.value) {
+        const gptQuery = 'Act as a Movie Recommendation system and suggest some movies for the query: ' + searchText?.current?.value + '. only give me names of 5 movies, comma separated like the example result given ahead. Example Result: Gadar, Sholey, Don, Golmal, Race';
+   // }
+       
 
     const handleGptSearch = async () => {
         // Make an API call to GPT API and get Movies Results
